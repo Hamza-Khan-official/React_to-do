@@ -17,7 +17,7 @@ const Todo = () => {
 
     let todo = () => {
         setInputArray([...InputArray, input])
-        setInput({ addtodo: "" }); 
+        // setInput([]); 
         // console.log(InputArray);
       
     }
@@ -31,6 +31,13 @@ const Todo = () => {
         newArray.splice(i, 1)
         setInputArray(newArray)
 
+    }
+
+    let edit_todo = (e,i) => {
+        var edit_copy_array =  [...InputArray];
+        var edit_prom =  prompt("Enter a Updated Value")
+        edit_copy_array.splice(i, 1, { addtodo: edit_prom })
+        setInputArray(edit_copy_array)
     }
 
     return (
@@ -53,7 +60,8 @@ const Todo = () => {
                                         // setDelSignleTodo(i),
                                         del_todo(i);
                                         }} className='btn btn-warning'>Delete</button>
-                                    <button className='btn btn-danger'>edit</button>
+
+                                    <button onClick={()=>{edit_todo(e,i)}} className='btn btn-danger'>edit</button>
                             </li>
                         })
                     }
