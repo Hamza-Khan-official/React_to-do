@@ -17,12 +17,45 @@ body {
 }
 
 /* Heading */
-h1 {
+.heading {
   color: #60a5fa; /* bright blue */
   text-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
   margin-bottom: 10px;
-  font-size: 28px;
+  font-size: 40px;
 }
+
+.first_div{
+  display: flex;
+  padding: 10px;
+   background-color: #1e293b;
+  border: 0.5px solid  #00d4ff;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px #00d4ff;
+}
+
+
+/* LOGINS  BUTTONS */
+.login {
+  background-color: rgb(30, 168, 247);
+  color: white;
+  box-shadow: 0 0 15px rgb(96, 191, 246);
+  border-radius: 10px;
+}
+
+.login:hover {
+  background-color: rgb(46, 161, 228);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+  transform: translateY(-2px);
+}
+
+
+
+.butttons{
+  margin-left: auto;
+  margin-top: 5px;
+}
+
+
 
 /* Container Box */
 .container {
@@ -31,7 +64,7 @@ h1 {
   max-width: 580px;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 15px #00d4ff;
 }
 
 /* Input & Buttons Wrapper */
@@ -42,6 +75,7 @@ h1 {
   align-items: center;
   margin-bottom: 20px;
 }
+
 
 /* Input Field */
 input[type="text"] {
@@ -186,6 +220,8 @@ ul li button:last-child:hover {
   box-shadow: 0 0 15px yellow;
   transform: scale(1.05);
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 600px) {
