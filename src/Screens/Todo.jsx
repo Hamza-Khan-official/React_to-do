@@ -69,7 +69,10 @@ const Todo = () => {
                         value={input.addtodo}
                         onChange={(e) => setInput({ addtodo: e.target.value })}
                         placeholder="Enter Todo..." id="todoInput" type="text" />
-                    <button onClick={todo} className={styles.editbtn} >Add Todo</button>
+                    <button onClick={todo} className={styles.editbtn} 
+                        disabled={input.addtodo === "" || input.addtodo === " "}>
+                        {input.addtodo === "" ? "Enter todo" : "Add todo"}
+                        </button>
                     <button onClick={delAll} className={styles.deletebtn}>Delete All</button>
                 </div>
                 <hr />
